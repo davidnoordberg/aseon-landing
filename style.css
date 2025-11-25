@@ -844,6 +844,9 @@ footer {
   border: 1px solid #E2E8F0;
   position: relative;
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .pricing-card:hover {
@@ -854,12 +857,12 @@ footer {
 .pricing-card.popular {
   border: 2px solid var(--color-primary);
   box-shadow: var(--shadow-lg);
-  transform: scale(1.05);
+  /* transform: scale(1.05); Removed for alignment */
   z-index: 2;
 }
 
 .pricing-card.popular:hover {
-  transform: scale(1.05) translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .popular-badge {
@@ -881,6 +884,15 @@ footer {
   margin-bottom: 32px;
   padding-bottom: 32px;
   border-bottom: 1px solid #F1F5F9;
+  flex: 0 0 auto;
+}
+
+.plan-header p {
+  min-height: 48px;
+  /* Align descriptions */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .plan-header h3 {
@@ -899,6 +911,8 @@ footer {
 .price.custom-price {
   font-size: 32px;
   margin-bottom: 34px;
+  padding-top: 8px;
+  /* Align with larger price text */
 }
 
 .price span {
@@ -909,6 +923,7 @@ footer {
 
 .plan-features {
   margin-bottom: 32px;
+  flex: 1 1 auto;
 }
 
 .plan-features li {
@@ -926,6 +941,7 @@ footer {
 
 .btn-full {
   width: 100%;
+  margin-top: auto;
 }
 
 @media (max-width: 768px) {
