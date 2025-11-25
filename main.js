@@ -49,6 +49,47 @@ document.addEventListener('DOMContentLoaded', () => {
         section.classList.add('fade-in-section');
         observer.observe(section);
     });
+
+    // Billing Toggle Functionality
+    const billingOptions = document.querySelectorAll('.billing-option');
+    const priceElements = document.querySelectorAll('.price[data-monthly]');
+
+    billingOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            // Update active state
+            billingOptions.forEach(opt => opt.classList.remove('active'));
+            option.classList.add('active');
+
+            // Get selected period
+            const period = option.getAttribute('data-period');
+            const isYearly = period === 'yearly';
+
+            // Update prices
+            priceElements.forEach(priceEl => {
+                const monthlyPrice = priceEl.getAttribute('data-monthly');
+                const yearlyPrice = priceEl.getAttribute('data-yearly');
+                const periodSpan = priceEl.querySelector('.period');
+
+                if (isYearly) {
+                    // Show yearly price
+                    if (yearlyPrice === 'Custom pricing') {
+                        priceEl.childNodes[0].textContent = yearlyPrice;
+                    } else {
+                        priceEl.childNodes[0].textContent = '€' + yearlyPrice;
+                        if (periodSpan) periodSpan.textContent = '/year';
+                    }
+                } else {
+                    // Show monthly price
+                    if (monthlyPrice === 'Custom pricing') {
+                        priceEl.childNodes[0].textContent = monthlyPrice;
+                    } else {
+                        priceEl.childNodes[0].textContent = '€' + monthlyPrice;
+                        if (periodSpan) periodSpan.textContent = '/mo';
+                    }
+                }
+            });
+        });
+    });
 });
 
 

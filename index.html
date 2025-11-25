@@ -274,12 +274,21 @@
           <p>Choose the plan that fits your brand's scale.</p>
         </div>
 
+        <!-- Billing Toggle -->
+        <div class="billing-toggle">
+          <button class="billing-option active" data-period="monthly">Monthly</button>
+          <button class="billing-option" data-period="yearly">
+            Yearly
+            <span class="save-badge">Save 2 months</span>
+          </button>
+        </div>
+
         <div class="pricing-grid">
           <!-- Starter Plan -->
           <div class="pricing-card">
             <div class="plan-header">
               <h3>Starter</h3>
-              <div class="price">€79<span>/mo</span></div>
+              <div class="price" data-monthly="79" data-yearly="790">€79<span class="period">/mo</span></div>
               <p>Perfect for small teams getting started with AI visibility.</p>
             </div>
             <ul class="plan-features">
@@ -340,7 +349,7 @@
             <div class="popular-badge">Most Popular</div>
             <div class="plan-header">
               <h3>Pro</h3>
-              <div class="price">€199<span>/mo</span></div>
+              <div class="price" data-monthly="199" data-yearly="1990">€199<span class="period">/mo</span></div>
               <p>For growing brands that need comprehensive coverage.</p>
             </div>
             <ul class="plan-features">
@@ -400,7 +409,8 @@
           <div class="pricing-card">
             <div class="plan-header">
               <h3>Enterprise</h3>
-              <div class="price custom-price">Custom pricing</div>
+              <div class="price custom-price" data-monthly="Custom pricing" data-yearly="Custom pricing">Custom pricing
+              </div>
               <p>For large organizations with custom needs.</p>
             </div>
             <ul class="plan-features">
