@@ -747,6 +747,63 @@ footer {
     display: block;
   }
 
+  /* Mobile Menu Overlay */
+  .nav-links {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 24px;
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    gap: 16px;
+  }
+
+  .nav-links.active {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav-links a {
+    padding: 12px 0;
+    border-bottom: 1px solid #F1F5F9;
+  }
+
+  .nav-actions {
+    position: fixed;
+    top: calc(var(--header-height) + 180px);
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 24px;
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    gap: 12px;
+  }
+
+  .nav-actions.active {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav-actions .btn {
+    width: 100%;
+  }
+
+
   .cta-box {
     padding: 40px 24px;
   }

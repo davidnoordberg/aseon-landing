@@ -3,18 +3,26 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Aseon Landing Page Loaded');
 
-    // Mobile Menu Toggle (Basic Implementation)
+    // Mobile Menu Toggle
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
+    const navActions = document.querySelector('.nav-actions');
 
     if (mobileBtn) {
         mobileBtn.addEventListener('click', () => {
-            // In a real app, we'd toggle a class to show/hide a mobile menu overlay
-            // For this single page demo, we'll just log it or maybe alert
-            console.log('Mobile menu clicked');
-            alert('Mobile menu would open here!');
+            navLinks.classList.toggle('active');
+            navActions.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                navActions.classList.remove('active');
+            });
         });
     }
+
 
     // Smooth Scroll for Anchor Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
