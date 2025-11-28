@@ -6,32 +6,29 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
-    const navActions = document.querySelector('.nav-actions');
     const backdrop = document.querySelector('.mobile-menu-backdrop');
 
     if (mobileBtn && backdrop) {
         mobileBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            navActions.classList.toggle('active');
             backdrop.classList.toggle('active');
         });
 
         // Close menu when clicking backdrop
         backdrop.addEventListener('click', () => {
             navLinks.classList.remove('active');
-            navActions.classList.remove('active');
             backdrop.classList.remove('active');
         });
 
-        // Close menu when clicking on a link
+        // Close menu when clicking on any link
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
-                navActions.classList.remove('active');
                 backdrop.classList.remove('active');
             });
         });
     }
+
 
 
 
