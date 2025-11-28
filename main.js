@@ -7,11 +7,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
     const navActions = document.querySelector('.nav-actions');
+    const backdrop = document.querySelector('.mobile-menu-backdrop');
 
-    if (mobileBtn) {
+    if (mobileBtn && backdrop) {
         mobileBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             navActions.classList.toggle('active');
+            backdrop.classList.toggle('active');
+        });
+
+        // Close menu when clicking backdrop
+        backdrop.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            navActions.classList.remove('active');
+            backdrop.classList.remove('active');
         });
 
         // Close menu when clicking on a link
@@ -19,9 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
                 navActions.classList.remove('active');
+                backdrop.classList.remove('active');
             });
         });
     }
+
 
 
     // Smooth Scroll for Anchor Links
