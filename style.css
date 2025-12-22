@@ -524,17 +524,17 @@ ul {
 }
 
 .card-blue .icon-box {
-  background: var(--accent-blue-light);
+  background: transparent;
   color: var(--color-primary);
 }
 
 .card-purple .icon-box {
-  background: var(--accent-purple-light);
+  background: transparent;
   color: #9333EA;
 }
 
 .card-green .icon-box {
-  background: var(--accent-green-light);
+  background: transparent;
   color: #16A34A;
 }
 
