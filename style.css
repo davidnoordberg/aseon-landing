@@ -115,15 +115,15 @@ ul {
 
 .section-badge {
   display: inline-block;
-  padding: 8px 16px;
-  background-color: var(--accent-blue-light);
+  padding: 0;
+  background-color: transparent;
   color: var(--color-primary);
-  border-radius: 100px;
+  border-radius: 0;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  border: 1px solid var(--accent-blue-border);
+  letter-spacing: 0.1em;
+  border: none;
 }
 
 .btn {
@@ -926,7 +926,19 @@ footer {
   height: 2px;
   background: #E2E8F0;
   margin-top: 30px;
-  /* Center with the step number */
+  position: relative;
+}
+
+.step-connector::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #CBD5E1;
+  border-bottom: 2px solid #CBD5E1;
 }
 
 /* Pricing Section */
