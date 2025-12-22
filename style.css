@@ -224,7 +224,7 @@ ul {
 .logo {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   font-weight: 700;
   font-size: 24px;
   color: var(--color-text-main);
@@ -289,7 +289,7 @@ ul {
   padding-top: calc(var(--header-height) + 80px);
   padding-bottom: 80px;
   overflow: hidden;
-  background: var(--gradient-hero);
+  background: linear-gradient(180deg, #FFFFFF 0%, #EFF6FF 100%);
   position: relative;
 }
 
