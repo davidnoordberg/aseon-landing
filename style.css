@@ -371,48 +371,7 @@ ul {
   margin-bottom: 48px;
 }
 
-/* Logo Strip */
-.logo-strip {
-  padding: 40px 0;
-  border-bottom: 1px solid #F1F5F9;
-  background: white;
-}
 
-.logo-strip-title {
-  text-align: center;
-  font-size: 14px;
-  color: var(--color-text-muted);
-  margin-bottom: 24px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 600;
-}
-
-.logo-grid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 64px;
-  flex-wrap: wrap;
-}
-
-.logo-grid img {
-  opacity: 0.6;
-  transition: all 0.3s ease;
-  filter: grayscale(100%);
-}
-
-.logo-grid img:hover {
-  opacity: 1;
-  filter: grayscale(0%);
-  transform: translateY(-2px);
-}
-
-/* Individual Logo Sizing */
-.logo-chatgpt {
-  height: 32px;
-  width: auto;
-}
 
 
 
