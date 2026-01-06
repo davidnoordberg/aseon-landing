@@ -39,6 +39,26 @@
     gtag('config', 'G-DV05JY0ZW1');
   </script>
 
+  <!-- AI Tracking -->
+  <script>
+    (function () {
+      var ref = document.referrer || '';
+      var ua = navigator.userAgent || '';
+      if (ref.includes('chatgpt.com') || ref.includes('chat.openai.com')) {
+        fetch('https://lkbrtxwwupaotxfpulgs.supabase.co/functions/v1/track-ai-visit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            projectId: '6b30f424-64b7-454e-a354-d53ca8494c7e',
+            referrer: ref,
+            userAgent: ua,
+            path: window.location.pathname
+          })
+        }).catch(function () { });
+      }
+    })();
+  </script>
+
   <!-- Fonts & Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
