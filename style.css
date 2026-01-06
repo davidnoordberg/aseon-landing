@@ -1391,16 +1391,10 @@ footer {
   .img-base {
     width: 100%;
     transform: none;
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 
   .img-overlay {
-    position: relative;
-    width: 90%;
-    bottom: auto;
-    right: auto;
-    margin-top: -40px;
-    margin-left: auto;
-    transform: rotate(2deg);
+    display: none;
   }
 }
