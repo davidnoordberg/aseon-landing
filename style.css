@@ -138,6 +138,16 @@ ul {
   gap: 8px;
 }
 
+.desktop-only {
+  display: inline-flex;
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
+
 .btn-primary {
   background-color: var(--color-text-main);
   /* Dark button like dashboard */
