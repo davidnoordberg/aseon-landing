@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Meta Tags -->
-  <title>Aseon</title>
+  <title>Aseon | AI Brand Visibility & Optimization</title>
   <meta name="description"
     content="Track and optimize your brand's visibility in ChatGPT. Aseon helps marketing teams control their narrative in the AI era." />
   <meta name="keywords"
@@ -57,6 +57,58 @@
         }).catch(function () { });
       }
     })();
+  </script>
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://aseon.io/#organization",
+          "name": "Aseon",
+          "url": "https://aseon.io/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://aseon.io/images/logo-aseon.png",
+            "width": 512,
+            "height": 512
+          },
+          "sameAs": [
+            "https://twitter.com/aseon_io",
+            "https://www.linkedin.com/company/aseon-io"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://aseon.io/#website",
+          "url": "https://aseon.io/",
+          "name": "Aseon",
+          "description": "Track and optimize your brand's visibility in ChatGPT. Aseon helps marketing teams control their narrative in the AI era.",
+          "publisher": {
+            "@id": "https://aseon.io/#organization"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://aseon.io/#software",
+          "name": "Aseon",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "49.00",
+            "priceCurrency": "EUR"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "124"
+          }
+        }
+      ]
+    }
   </script>
 
   <!-- Fonts & Styles -->
@@ -250,7 +302,7 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2">
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
-                Unlimited competitor tracking
+                Comprehensive competitor tracking
               </li>
               <li>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2">
@@ -387,7 +439,7 @@
             <div class="popular-badge">Pay per Project</div>
             <div class="plan-header">
               <h3>Standard</h3>
-              <div class="price" data-monthly="99" data-yearly="990">€99<span class="period">/mo</span></div>
+              <div class="price" data-monthly="49" data-yearly="490">€49<span class="period">/mo</span></div>
               <p>Everything you need to manage your brand's AI presence.</p>
             </div>
             <ul class="plan-features">
