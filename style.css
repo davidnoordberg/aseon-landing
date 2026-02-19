@@ -947,6 +947,13 @@ footer {
 .pricing {
   padding: 24px 0;
   background: white;
+  scroll-margin-top: 100px;
+}
+
+/* Fix for other sections */
+#features,
+.how-it-works {
+  scroll-margin-top: 100px;
 }
 
 /* Billing Toggle */
